@@ -14,6 +14,10 @@ export default {
     };
   },
   methods: {
+    // fetchData() {
+    //   this.getMovies();
+    //   this.getSeries();
+    // },
     getMovies() {
       let myUrl = `${store.apiURL}${store.FindMovie}`;
       console.log(myUrl);
@@ -26,16 +30,30 @@ export default {
         .catch((err) => {
           console.log("Error:", err);
         });
+      let TvmyUrl = `${store.tvApiURL}${store.FindMovie}`;
+      console.log(TvmyUrl);
+      axios
+        .get(TvmyUrl)
+        .then((res) => {
+          store.SeriesList = res.data.results;
+          console.log(store.SeriesList);
+        })
+        .catch((err) => {
+          console.log("Error:", err);
+        });
+      store.tutto = [...store.MoviesList, ...store.SeriesList];
+      console.log(store.MoviesList);
     },
-  },
-  created() {
-    this.getMovies();
+    // },
+    created() {
+      this.getMovies();
+    },
   },
 };
 </script>
 
 <template>
-  <AppHeader @search="getMovies" />
+  <AppHeader @search="getMovies()" />
   <MovieList />
 </template>
 

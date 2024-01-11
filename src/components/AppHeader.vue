@@ -17,7 +17,7 @@ export default {
   <div class="container-fluid d-flex justify-content-between pt-3">
     <div class="logo">BOOLFLIX</div>
     <div>
-      <AppSearch @search="getMovies" />
+      <AppSearch @search="getMovies()" />
     </div>
   </div>
 </template>

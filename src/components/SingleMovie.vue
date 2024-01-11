@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div>
-    <h2>{{ info.title }}</h2>
+    <h2>{{ info.title || info.name }}</h2>
     <div>{{ info.original_title }}</div>
     <div class="lingua originale">{{ info.original_language }}</div>
     <div>{{ info.vote_average }}</div>
