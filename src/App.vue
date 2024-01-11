@@ -16,14 +16,11 @@ export default {
   methods: {
     getMovies() {
       let myUrl = `${store.apiURL}${store.FindMovie}`;
-      // if (store.FindMovie !== "") {
-      //   myUrl += `/${store.FindMovie}`;
-      // }
       console.log(myUrl);
       axios
         .get(myUrl)
         .then((res) => {
-          store.MoviesList = res.data;
+          store.MoviesList = res.data.results;
           console.log(store.MoviesList);
         })
         .catch((err) => {
