@@ -5,7 +5,12 @@ export default {
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <h2>titolo</h2>
+    <div>titolo originale</div>
+    <div>lingua</div>
+    <div>voto</div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
