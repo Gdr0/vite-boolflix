@@ -6,7 +6,7 @@ export default {
   },
   methods: {
     getFlagPath(language) {
-      let flagPath = `../assets/img/${language}.svg`;
+      let flagPath = `/img/${language}.svg`;
       console.log("Flag Path:", flagPath);
       return flagPath;
     },
@@ -32,7 +32,9 @@ export default {
       </div>
       <div class="descrizione d-flex flex-column">
         <h5>{{ info.title || info.name }}</h5>
-        <div class="lingua originale">{{ info.original_language }}</div>
+        <div class="lingua originale">
+          <img :src="getFlagPath(info.original_language)" alt="" />
+        </div>
         <div class="stars">
           <span v-for="stars in scoreAverege(info.vote_average)">
             <i class="fa-solid fa-star"></i>
@@ -67,6 +69,9 @@ export default {
   width: 342px;
   transition: opacity 0.3s ease;
   padding: 5px;
+  img {
+    width: 50px;
+  }
 }
 .card-movie:hover .descrizione {
   opacity: 1;
