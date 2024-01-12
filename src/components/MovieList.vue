@@ -17,7 +17,7 @@ export default {
 <template>
   <section class="container-fluid">
     <div class="row">
-      <div v-for="movie in store.tutto" class="col-6 col-md-4 col-lg-2 mb-5">
+      <div v-for="movie in store.tutto" class="col-4 my-3">
         <SingleMovie :info="movie" />
       </div>
     </div>
@@ -27,9 +27,9 @@ export default {
 <style lang="scss" scoped>
 .container-fluid {
   height: 100vw;
-  // background-color: #141414;
-  // .row {
-  //   background-color: #141414;
-  // }
+  background-color: #141414;
+  .row {
+    background-color: #141414;
+  }
 }
 </style>

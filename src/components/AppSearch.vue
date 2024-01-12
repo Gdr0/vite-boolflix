@@ -7,6 +7,17 @@ export default {
       store,
     };
   },
+  methods: {
+    handleSearch() {
+      this.$emit("search");
+    },
+
+    onEnterKey(event) {
+      if (event.key === "Enter") {
+        this.handleSearch();
+      }
+    },
+  },
 };
 </script>
 <template>
@@ -17,8 +28,11 @@ export default {
       placeholder=""
       aria-label="Search"
       v-model="store.FindMovie"
+      @keyup="onEnterKey"
     />
-    <button @click.prevent="$emit('search')" class="btn" type="submit"></button>
+    <button @click.prevent="handleSearch()" class="btn" type="submit">
+      SEARCH
+    </button>
   </form>
 </template>
 

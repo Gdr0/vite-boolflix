@@ -18,7 +18,6 @@ export default {
     class="container-fluid d-flex justify-content-between align-items-center"
   >
     <div class="logo">BOOLFLIX</div>
-    <div><i class="fa-solid fa-star"></i></div>
     <div>
       <AppSearch @search="getMovies()" />
     </div>
