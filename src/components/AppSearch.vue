@@ -14,13 +14,11 @@ export default {
     <input
       class="me-2 rounded"
       type="search"
-      placeholder="Search"
+      placeholder=""
       aria-label="Search"
       v-model="store.FindMovie"
     />
-    <button @click.prevent="$emit('search')" class="btn" type="submit">
-      Search
-    </button>
+    <button @click.prevent="$emit('search')" class="btn" type="submit"></button>
   </form>
 </template>
 

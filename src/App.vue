@@ -50,9 +50,12 @@ export default {
 
 <template>
   <AppHeader @search="getMovies()" />
+
   <MovieList />
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss";
+div {
+}
 </style>

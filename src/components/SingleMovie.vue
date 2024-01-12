@@ -34,10 +34,19 @@ export default {
       alt="info.original_language"
     />
     <div>{{ scoreAverege(info.vote_average) }}</div>
-    <div class="copertina">
+    <span v-for="stars in scoreAverege(info.vote_average)">
+      <i class="fa-solid fa-star"></i>
+    </span>
+    <!-- <div class="copertina">
       <img :src="getPoster(info.poster_path)" alt="" />
-    </div>
+    </div> -->
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+div {
+  i {
+    color: gold;
+  }
+}
+</style>

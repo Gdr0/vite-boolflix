@@ -14,8 +14,11 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid d-flex justify-content-between pt-3">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
     <div class="logo">BOOLFLIX</div>
+    <div><i class="fa-solid fa-star"></i></div>
     <div>
       <AppSearch @search="getMovies()" />
     </div>
@@ -24,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .container-fluid {
-  height: 200px;
+  height: 70px;
   background-color: black;
   .logo {
     font-size: large;
