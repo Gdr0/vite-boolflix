@@ -16,6 +16,10 @@ export default {
       console.log(PosterUrl);
       return PosterUrl;
     },
+    scoreAverege(score) {
+      let newScore = Math.floor(score / 2);
+      return newScore;
+    },
   },
 };
 </script>
@@ -29,7 +33,7 @@ export default {
       :src="getFlagPath(info.original_language)"
       alt="info.original_language"
     />
-    <div>{{ info.vote_average }}</div>
+    <div>{{ scoreAverege(info.vote_average) }}</div>
     <div class="copertina">
       <img :src="getPoster(info.poster_path)" alt="" />
     </div>
