@@ -14,10 +14,6 @@ export default {
     };
   },
   methods: {
-    // fetchData() {
-    //   this.getMovies();
-    //   this.getSeries();
-    // },
     getMovies() {
       let myUrl = `${store.apiURL}${store.FindMovie}`;
       console.log(myUrl);

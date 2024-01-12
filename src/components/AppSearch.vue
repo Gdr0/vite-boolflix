@@ -11,7 +11,6 @@ export default {
 </script>
 <template>
   <form class="d-flex">
-    />
     <input
       class="me-2 rounded"
       type="search"
